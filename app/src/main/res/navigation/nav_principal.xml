@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_principal"
+    app:startDestination="@id/contatosList">
+
+    <fragment
+        android:id="@+id/contatosList"
+        android:name="org.senac.contatos.view.ContatosList"
+        android:label="contatos_list_fragment"
+        tools:layout="@layout/fragment_contatos_list" >
+        <action
+            android:id="@+id/action_contatosList_to_contatoForm"
+            app:destination="@id/contatoForm" />
+    </fragment>
+    <fragment
+        android:id="@+id/contatoForm"
+        android:name="org.senac.contatos.view.ContatoForm"
+        android:label="fragment_contato_form"
+        tools:layout="@layout/fragment_contato_form" />
+</navigation>
